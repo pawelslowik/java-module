@@ -8,14 +8,13 @@
     <artifactId>java-module</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>consumer-module-one</module>
-        <module>provider-module-one</module>
+        <module>vegetable-consumer-module</module>
+        <module>vegetable-provider-module</module>
     </modules>
     <packaging>pom</packaging>
 
     <properties>
         <java.version>1.10</java.version>
-        <logback.version>1.2.3</logback.version>
     </properties>
 
     <build>
@@ -38,15 +37,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
 </project>

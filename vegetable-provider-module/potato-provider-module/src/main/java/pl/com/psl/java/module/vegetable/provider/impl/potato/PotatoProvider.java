@@ -1,4 +1,4 @@
-package pl.com.psl.java.module.vegetable.provider.potato.impl;
+package pl.com.psl.java.module.vegetable.provider.impl.potato;
 
 import pl.com.psl.java.module.vegetable.provider.api.VegetableProvider;
 

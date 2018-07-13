@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>vegetable-consumer-module</artifactId>
+    <artifactId>vegetable-processor-module</artifactId>
 
     <dependencies>
         <dependency>
@@ -17,11 +17,7 @@
             <artifactId>vegetable-provider-api-module</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>pl.com.psl.java.module</groupId>
-            <artifactId>vegetable-processor-module</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
+
 
 </project>

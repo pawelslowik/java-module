@@ -10,6 +10,7 @@
     <modules>
         <module>vegetable-consumer-module</module>
         <module>vegetable-provider-module</module>
+        <module>vegetable-processor-module</module>
     </modules>
     <packaging>pom</packaging>
 

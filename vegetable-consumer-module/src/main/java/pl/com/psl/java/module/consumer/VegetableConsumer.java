@@ -8,6 +8,7 @@ import pl.com.psl.java.module.processor.impl.slicing.SlicingProcessor;
 import pl.com.psl.java.module.vegetable.provider.api.Vegetable;
 import pl.com.psl.java.module.vegetable.provider.api.VegetableProvider;
 
+import java.util.Arrays;
 import java.util.ServiceLoader;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -21,6 +22,10 @@ public class VegetableConsumer {
                 .of(new PeelingProcessor())
                 .and(new SlicingProcessor())
                 .and(new GrillingProcessor());
+
+        Arrays.stream(VegetableProcessorChain.class.getDeclaredFields()).forEach(field -> {
+            field.setAccessible(true);
+        });
 
         ScheduledExecutorService vegetableConsumerExecutor = Executors.newSingleThreadScheduledExecutor();
         vegetableConsumerExecutor.scheduleAtFixedRate(() -> {

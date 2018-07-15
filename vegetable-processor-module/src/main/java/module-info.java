@@ -1,4 +1,4 @@
-module vegetable.processor.module {
+open module vegetable.processor.module {
     requires transitive vegetable.provider.api.module;
     exports pl.com.psl.java.module.processor;
     exports pl.com.psl.java.module.processor.impl;

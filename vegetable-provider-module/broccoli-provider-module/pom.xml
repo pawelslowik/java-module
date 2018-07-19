@@ -3,18 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>java-module</artifactId>
+        <artifactId>vegetable-provider-module</artifactId>
         <groupId>pl.com.psl.java.module</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <modules>
-        <module>cucumber-provider-module</module>
-        <module>potato-provider-module</module>
-        <module>vegetable-provider-api-module</module>
-        <module>broccoli-provider-module</module>
-    </modules>
-    <artifactId>vegetable-provider-module</artifactId>
+
+    <artifactId>broccoli-provider-module</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>pl.com.psl.java.module</groupId>
+            <artifactId>vegetable-provider-api-module</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

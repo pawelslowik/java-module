@@ -39,5 +39,5 @@ and run the launcher:
 optionally copy/remove jar containing a mapping file in [plugins directory path] to observe dynamic loading of service providers in runtime:
 
 ```bash
-cp vegetable-provider-module/broccoli-provider-module/target/broccoli-provider-module-1.0-SNAPSHOT.jar [plugins directory path]
+cp vegetable-provider-module/broccoli-provider-module/target/broccoli-provider-module-1.0-SNAPSHOT.jar <plugins directory path>
 ```

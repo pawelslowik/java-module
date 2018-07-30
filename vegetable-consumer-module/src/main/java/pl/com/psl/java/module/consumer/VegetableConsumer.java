@@ -15,7 +15,6 @@ import java.net.URLClassLoader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.Optional;
 import java.util.ServiceLoader;
 import java.util.concurrent.Executors;
@@ -31,9 +30,7 @@ public class VegetableConsumer {
                 .and(new SlicingProcessor())
                 .and(new GrillingProcessor());
 
-        Arrays.stream(VegetableProcessorChain.class.getDeclaredFields()).forEach(field -> field.setAccessible(true));
         Optional<Path> pluginsDirectoryPath = getPluginsDirectoryPath(args);
-
         ScheduledExecutorService vegetableConsumerExecutor = Executors.newSingleThreadScheduledExecutor();
         vegetableConsumerExecutor.scheduleAtFixedRate(() -> pluginsDirectoryPath.ifPresentOrElse(
                     path -> loadPluginsAndConsumeWithServiceProviders(vegetableProcessor, path),
